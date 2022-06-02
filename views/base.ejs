@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BDD beit el hekma</title>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+     <link rel="icon" href="images/logo.png">
+    </head>
+   <style>
+       *{<
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}>
+body{
+    font-family: 'Kiwi Maru', serif;
+}
+
+    </style>
+<body>
+    
+    <%- include('buttons.ejs') %>
+    <p style="font-size: 30px; color:darkslategray;text-align: center;margin-top: 30px;margin-bottom: 30px;"> Remplissage de base de donnée </p>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-4" style="border-right: 1px solid #b1b1b1">
+            <h2>Eleve</h2>
+        <form method="post" action="/bdd/add_etudiant">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nom</label>
+      <input name="lastname"  type="text" class="form-control" id="inputEmail4" placeholder="felen">
+    </div>
+    <div class="form-group col-md-6">
+      <label  for="inputPassword4">Prenom</label>
+      <input name="name" type="text" class="form-control" id="inputPassword4" placeholder="felteni">
+    </div>
+  </div>
+  <label  for="date">Date de naissance</label>
+  <div>
+ <input class="form-control" name="daten" type="date">
+</div>
+              <div class="form-group">
+    <label for="inputAddress">Num tel:</label>
+    <input name="phone" type="number" class="form-control" id="inputAddress" placeholder="12345678">
+  </div>
+
+  <select name="classe" id="inputState" class="form-control">
+    <option selected disabled>Choisire...</option>
+  <% classes.forEach (classe => { %>
+    <option value="<%= classe.id %>"><%= classe.level %> <%= classe.section %> <%= classe.number %></option>
+    <% }) %>
+  </select>
+  <br>
+  <button type="submit" class="btn btn-primary" style="width: 100%">insérer</button>
+</form> 
+        </div>
+          <div class="col-4" style="border-right: 1px solid #b1b1b1">
+                <h2>Prof</h2>      
+             <form action="/bdd/add_prof" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nom</label>
+    
+      <input  name="lastname" type="text" class="form-control" id="inputEmail4" placeholder="felen">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Prenom</label>
+      <input name="name" type="text" class="form-control" id="inputPassword4" placeholder="felteni">
+    </div>
+  </div>
+ 
+  <div class="form-group">
+    <label for="inputAddress2">CIN</label>
+    <input name="cin" type="text" class="form-control" id="inputAddress2" placeholder="*******">
+  </div>
+              <div class="form-group">
+    <label for="inputAddress">Num tel:</label>
+    <input type="number" name="phone" class="form-control" id="inputAddress" placeholder="12345678">
+  </div>
+  <select name="classes" id="inputState" class="form-control" multiple>
+    <option selected disabled>Choisire...</option>
+  <% classes.forEach (classe => { %>
+    <option value="<%= classe.slug %>"><%= classe.level %> <%= classe.section %> <%= classe.number %></option>
+    <% }) %>
+  </select>
+  <button type="submit" class="btn btn-primary" style="width: 100%">insérer</button>
+</form>
+        </div>
+          <div class="col-4">
+                <h2>Section</h2>      
+             <form method="post" action="/bdd/add_classe">
+  <div class="form-row">
+       <div class="form-group col-md-6">
+      <label for="inputState">Section</label>
+      <select name="section" id="inputState" class="form-control">
+        <option selected disabled>Choisire...</option>
+          <option value="Lettre">Lettre</option>
+          <option value="Informatique">Info</option>
+          <option value="Science">Science</option>
+          <option value="Eco">Eco</option>
+          <option value="Technique">Technique</option>
+          <option value="Math">Math</option>
+           <option value=" ">college/1er annes</option>
+
+      </select>
+    </div>
+    
+  <div class="form-group col-md-6">
+      <label for="inputState">Classe</label>
+      <select name="level" id="inputState" class="form-control">
+        <option selected disabled>Choisire...</option>
+          <option value="7" >7eme</option>
+          <option value="8">8eme</option>
+          <option value="9">9eme</option>
+          <option value="1">1er</option>
+          <option value="2">2eme</option>
+          <option value="3">3eme</option>
+          <option value="4">4eme</option>
+
+      </select>
+    </div>
+  </div>
+              <div class="form-group disabled">
+    <label for="inputAddress">Year</label>
+    <input name="year" ty pe="number" class="form-control " disabled id="inputAddress" value="2021">
+   <br> <label for="numero">Numero</label>
+    <input name="number" type="number" class="form-control "  id="numero" value="1" >
+  </div>
+  <button type="submit" class="btn btn-primary " style="width: 100%">insérer</button>
+</form>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>

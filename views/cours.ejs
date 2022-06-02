@@ -1,0 +1,508 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>i E-learn</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+/* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+        .leadx{
+                background: rgba(41, 39, 39, 0.35);
+    border-radius: 6px;
+        }
+     .display-4 {
+    font-size: 1.6rem !important;
+}
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+        .imgr{
+            max-height: 500px;
+            max-width: 500px;
+        }
+        @media (max-width: 700px) {
+  .imgr{
+            max-height: 300px;
+            max-width: 300px;
+      text-align: center;
+        }
+}
+          @media (min-width: 767px) {
+  .imgr{
+                text-align: center;
+            max-width: 400px;
+        }
+}
+                @media (min-width: 800px) {
+  .imgr{
+      
+             text-align: none;
+            max-width: 500px;
+      max-height: 500px;
+        }
+}
+        .nav-link:hover{
+            padding-bottom: 0px!important;
+            border-bottom: 1px solid gray!important;
+               
+        }
+        .nav-link{
+    white-space: nowrap!important;
+        }
+        @media (min-width: 1200px){
+        .bgm{
+            display: none!important;
+            }} 
+        @media (max-width: 1200px){
+        .nav-scroller{
+              display: none!important;
+                }
+        }
+        @media (max-width:991px){
+            .nav-link{
+                 text-align: center;
+            }
+        }
+        .card{
+            min-width: 220px!important;
+            width:17.2vw!important;
+            align-self: center!important;
+            margin:10px!important;
+        }
+        .nom-prof{
+            margin-left: 10px;
+    color: white;
+    font-size: 1rem;
+  font-family: sans-serif;
+    margin-top: 30px;
+             cursor: pointer;
+            
+        }
+        .nom-prof:hover{
+             color: #5c5c5c;
+            transition: 0.2s;
+        }
+        .top-card{
+            border-bottom: 2px solid rgba(75, 74, 74, 0.62);
+        }
+        .card-text{
+            font-size: 0.9rem;
+              font-family: sans-serif;
+            color: #7b7878!important;
+        }
+        .featurette-dividers{
+                margin-top: 0.6rem!important;
+    margin-bottom: 0.6rem!important;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+        }
+        .matier{
+            color: #4d4b4b;
+            cursor: pointer;
+        }
+        .icon{
+            color: rgba(144, 144, 144, 0.93)!important;
+            float: right;
+            margin-right: 6px;
+            font-size: 1.1rem;
+            padding-bottom: 0px!important;
+            
+        }
+        .card-body{
+            padding-bottom: 10px!important;
+        }
+    </style>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+
+  </head>
+  <body>
+    
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="text-muted" href="#">Retour</a>
+      </div>
+      <div class="col-4 text-center animate__animated  animate__backInDown">
+        <a class="blog-header-logo text-dark " href="#">i E-learn</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="text-muted" href="#" aria-label="Search" data-toggle="modal" data-target="#exampleModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Chercher</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary"  data-toggle="modal" data-target="#exampleModal2" href="#">Connectez</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2 ">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 text-muted" href="index.html.html">Welcom Area</a>
+      <a class="p-2 text-muted Actives" href="#">Accueil</a>
+      <a class="p-2 text-muted" href="#">La technologie</a>
+      <a class="p-2 text-muted" href="#">Nos Professeurs</a>
+      <a class="p-2 text-muted" href="#">Nos Commanditaires</a>
+      <a class="p-2 text-muted" href="#">Acces Au Cours</a>
+      <a class="p-2 text-muted" href="#">Acces Au Visioconferance</a>
+      <a class="p-2 text-muted" href="#">Contacez Nous</a>
+    
+    </nav>
+  </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bgm">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse ml-auto" id="navbarNav">
+    <ul class="navbar-nav">
+     
+      <li class="nav-item">
+        <a class="nav-link" href="#">Welcom Area</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Accueil</a>
+      </li>
+           <li class="nav-item">
+        <a class="nav-link" href="#">technologie</a>
+      </li>
+           <li class="nav-item">
+        <a class="nav-link" href="#">Commanditaires</a>
+      </li>
+           <li class="nav-item">
+        <a class="nav-link" href="#">Professeurs</a>
+      </li>
+           <li class="nav-item">
+        <a class="nav-link" href="#">Cours</a>
+      </li>
+           <li class="nav-item">
+        <a class="nav-link" href="#">Visioconferance</a>
+      </li>
+           <li class="nav-item">
+        <a class="nav-link" href="#">Contacez Nous</a>
+      </li>
+    
+    </ul>
+  </div>
+</nav>
+    <nav class="nav d-flex justify-content-between" style="margin-bottom: 30px;">
+      <a class="p-2 text-muted Actives" href="#">&nbsp;</a>
+      <a class="p-2 text-muted" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer!important;font-size: 1.3rem!important;"><i class="fas fa-plus"></i><sub>Ajouter cours</sub></a>
+    </nav>
+  
+     
+     
+      <div class="row">
+        <% for(let i = 0 ; i < cours.length ; i++) { %>
+          <div class=" card" style="width:18.2vw;margin:6px;">
+  <div class="top-card" style="height: 90px;background:<%= cours[i].color %>!important;"><p class="matier"> &nbsp;<%= cours[i].matiere %></p>
+      <p class="nom-prof"><%= cours[i].publisher_name %></p> 
+              </div>
+  <div class="card-body">
+    <p class="card-text"><%= cours[i].classe %></p>
+      <hr class="featurette-dividers">
+      <a href="#" class="icon">
+      <i  class="fa fa-id-card-alt"></i></a>
+      <a href="#" class="icon"  data-toggle="modal" data-target="#Modal<%= i %>">
+      <i class="fas fa-file"></i></a>
+  </div>
+</div>
+<% } %>              
+</div>
+    
+    
+    
+    </div>
+      </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajoutez votre cours</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form enctype="multipart/form-data" method="post" action="/cour/abc/add_cour">
+
+           <div class="form-group">
+    <label for="exampleFormControlInput1">Matier</label>
+    <input type="text" name="matiere" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Chapitre</label>
+    <input type="text" name="chapitre" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Classe</label>
+  <select name="classe" id="inputState" class="form-control" >
+    <option selected disabled>Choisire...</option>
+  <% classes.forEach (classe => { %>
+    <option value="<%= classe.slug %>"><%= classe.level %> <%= classe.section %> <%= classe.number %></option>
+    <% }) %>
+  </select>
+
+  </div>
+           <br>
+           <div class="form-group">
+    <label for="exampleFormControlFile1">Importer votre fichier</label>
+    <br>
+    <input type="file" multiple="multiple" name="cour" class="upload up" id="up" onchange="readURL(this);">
+    <br><br><br>
+<input type="color" name="clr">
+  </div>
+           <br>
+            <button type="submit"  class="btn btn-secondary">Save changes</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+<% for (let i=0 ; i< cours.length; i++) { %>
+  <div class="modal fade" id="Modal<%= i %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">   
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color:red;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+    <table class="table table table-bordered table-dark">
+    <thead>
+      <tr>
+        <th scope="col"><%= i+1 %></th>
+            <th scope="col">Etat</th>
+        <th scope="col">Telecharger</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% cours[i].files.forEach(file => { %>
+      <tr>
+      
+        <th scope="row">Support : </th>
+        <td>Disponible</td>
+     
+          <td><a href="/cour/<%= cours[i].id %>/<%= file %>" style="color:white;"><%= file %></a></td>
+      </tr>
+    <% }) %>
+    </tbody>
+  </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <% } %>
+    
+    
+    
+    </body></html>  
